@@ -14,9 +14,14 @@ Make sure you have installed JDK1.8+
 
 ### Configuration
 
+#### Tools
+- `Selenide` - Selenium based web testing framework [Selenide](https://selenide.org/)
+- `AssertJ` - assert library for java [AssertJ](https://joel-costigliola.github.io/assertj/)
+- `Cucumber JVM` - Java implementation for Cucumber [Cucumber.io](https://cucumber.io/)
+
 #### Default settings
-- `browser.name=firefox - default browser to run tests (variants: ie, edge, chrome, firefox)` 
-- `browser.maximized=true - start browser maximized`
+- `browser.name=firefox` - default browser to run tests (variants: ie, edge, chrome, firefox)
+- `browser.maximized=true` - start browser maximized
 
 #### System properties
 - `-Dselenide.browser` - override browser name to run tests
@@ -31,15 +36,27 @@ Make sure you have installed JDK1.8+
 
 #### Run test on remote selenium hub
 
-These tests can be run using [BrowserStack!](https://www.browserstack.com)
+These tests can be run using [BrowserStack](https://www.browserstack.com)
 Configuration already contains an necessary data to connet to the BrowserStack and run tests
+
+
 
 
 ![BrowserStack dashboard](assets/browserstack-dashboard.png/?raw=true "BrowserStack dashboard")
 
+
+
+
+
+![BrowserStack run recording](assets/video-browserstack.gif/?raw=true "BrowserStack video")
+
+
+
+
+
 I tried to register and use [SauceLab!](https://saucelabs.com), but could not get account validated
 
-![BrowserStack dashboard](assets/saucelab-error.png/?raw=true "SauceLab error")
+![SauceLab error](assets/saucelab-error.png/?raw=true "SauceLab error")
 
 #### Example how to run tests remotely
 - `mvnw clean -Dselenide.remote=https://alemdianov1:stRXFQxepHA2kBrMiDeF@hub-cloud.browserstack.com/wd/hub -Dselenide.timeout=10000 test`
